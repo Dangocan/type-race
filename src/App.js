@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 
+let a = `console.log("oi mundo")`;
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <text>{a}</text>
+      <input type="text" onChange={(event)=>{
+
+        if(event.target.value === a.substr(0, event.target.value.length)){
+          console.log('certo');
+        } else{
+          console.log("errado");
+        };
+      }}></input>
+    </>  
   );
 }
 
